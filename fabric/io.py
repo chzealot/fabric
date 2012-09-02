@@ -5,7 +5,9 @@ import time
 from select import select
 
 from fabric.state import env, output, win32
-from fabric.auth import get_password, set_password
+#from fabric.auth import get_password, set_password
+from fabric.contrib.auth_keyring import get_sudo_password as get_password
+from fabric.contrib.auth_keyring import set_sudo_password as set_password
 import fabric.network
 from fabric.network import ssh
 

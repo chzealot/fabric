@@ -12,7 +12,9 @@ import time
 import socket
 import sys
 
-from fabric.auth import get_password, set_password
+#from fabric.auth import get_password, set_password
+from fabric.contrib.auth_keyring import get_ssh_password as get_password
+from fabric.contrib.auth_keyring import set_ssh_password as set_password
 from fabric.utils import abort, handle_prompt_abort
 from fabric.exceptions import NetworkError
 
